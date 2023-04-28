@@ -14,13 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    $title= 'Hello World';
+    $subtitle= 'Laravel first steps';
+
     $university_db= [
-        'title' => 'University',
+        'name' => 'University',
         'degrees' => 'Corso di Laurea in Biologia, Corso di Laurea in Biologia molecolare, Corso di Laurea in Biotecnologie',
-        'departments' => "Dipartimento di Biologia, Dipartimento di Fisica e astronomia, Dipartimento di Ingegneria dell'informazione",
+        'departments' => "Biologia, Fisica e astronomia, Ingegneria dell'informazione",
         'teachers' => 'Artemide Rizzi, Gianantonio Battaglia, Erminia Gatti',
         'students' => 'Nico Bianco, Rocco Serra, Miriana Conte'
     ];
 
-    return view('home', $university_db);
+    return view('home', $university_db, compact('title', 'subtitle'));
 });

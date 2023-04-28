@@ -8,15 +8,18 @@
 </head>
 <body>
     <header>
-        <h1>Hello World</h1>
+        <div>
+            <h1>{{$title}}</h1>
+            <h2>{{$subtitle}}</h2>
+        </div>
     </header>
     <main>
-        <h2>{{$title}}</h2>
+        <h3>{{$name}}</h3>
         <ul>
-            <li>{{$degrees}}</li>
-            <li>{{$departments}}</li>
-            <li>{{$students}}</li>
-            <li>{{$teachers}}</li>
+            <li>Corsi: {{$degrees}}</li>
+            <li>Dipartimenti: {{$departments}}</li>
+            <li>Studenti: {{$students}}</li>
+            <li>Insegnanti: {{$teachers}}</li>
         </ul>
     </main>
 </body>
